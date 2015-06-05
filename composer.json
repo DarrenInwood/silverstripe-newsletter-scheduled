@@ -1,0 +1,24 @@
+{
+	"name": "ajshort/silverstripe-newsletter-scheduled",
+	"description": "SilverStripe Newsletter Scheduling module",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "newsletter", "scheduler"],
+	"license": "SilverStripe Newsletter Scheduling Module License",
+	"authors": [
+		{
+			"name": "Andrew Short",
+			"email": "andrewjshort@gmail.com"
+		}
+	],
+	"require": {
+		"silverstripe/cms": ">=3.1",
+		"silverstripe/framework": ">=3.1",
+		"silverstripe/newsletter": ">=0.6.1"
+	},
+	"extra": {
+		"installer-name": "newsletter-scheduled",
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
+	}
+}

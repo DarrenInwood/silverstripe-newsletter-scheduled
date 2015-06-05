@@ -5,7 +5,7 @@
  *
  * @package silverstripe-newsletter-scheduled
  */
-class NewsletterScheduledExtension extends DataObjectDecorator {
+class NewsletterScheduledExtension extends DataExtension {
 
 	private static $db = array(
 		'IsScheduled'   => 'Boolean',

@@ -7,19 +7,16 @@
  */
 class NewsletterScheduledExtension extends DataObjectDecorator {
 
-	public function extraStatics() {
-		return array(
-			'db' => array(
-				'IsScheduled'   => 'Boolean',
-				'ScheduledTime' => 'SS_Datetime'
-			),
-			'has_one' => array(
-				'SendJob' => 'QueuedJobDescriptor'
-			)
-		);
-	}
+	private static $db = array(
+		'IsScheduled'   => 'Boolean',
+		'ScheduledTime' => 'SS_Datetime',
+	);
 
-	public function updateCMSFields(FieldSet $fields) {
+	private static $has_one = array(
+		'SendJob' => 'QueuedJobDescriptor',
+	);
+
+	public function updateCMSFields(FieldList $fields) {
 		if ($this->owner->Status != 'Draft') {
 			return;
 		}
